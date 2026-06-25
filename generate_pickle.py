@@ -140,3 +140,13 @@ print(f"   Restaurants  : {len(verify['df'])}")
 print(f"   Similarity   : {verify['cosine_sim'].shape}")
 print(f"   Index entries: {len(verify['indices'])}")
 print("=" * 50)
+
+
+import os
+import subprocess
+import sys
+
+if not os.path.exists("Manna.pkl"):
+    subprocess.run([sys.executable, "generate_pickle.py"])
+
+# load pickle
