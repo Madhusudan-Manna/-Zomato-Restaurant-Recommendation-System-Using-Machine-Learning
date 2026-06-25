@@ -220,11 +220,3 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-import os
-import subprocess
-import sys
-
-if not os.path.exists("Manna.pkl"):
-    subprocess.run([sys.executable, "generate_pickle.py"])
-
-# load pickle
